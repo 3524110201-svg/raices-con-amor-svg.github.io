@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raíces con Amor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    /* Encabezado */
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    /* Menú */
+    nav {
+      background: #388E3C;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Secciones */
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #2E7D32;
+      margin-bottom: 1rem;
+    }
+
+    /* Galería normal (Quiénes somos, Eventos, Calidad) */
+    .imagenes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+    .imagenes img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .imagenes img:hover {
+      transform: scale(1.05);
+    }
+
+    figure {
+      text-align: center;
+      margin: 0;
+    }
+    figcaption {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /*  Carrusel Productos */
+    .carrusel {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .carrusel-contenido {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carrusel-item {
+      min-width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .carrusel-item img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    /* Botones del carrusel */
+    .carrusel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      font-size: 18px;
+    }
+    .carrusel-btn.izquierda {
+      left: 10px;
+    }
+    .carrusel-btn.derecha {
+      right: 10px;
+    }
+
+    /* Pie de página */
+    footer {
+      background: #2E7D32;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header>
+    <h1>🌱 Raíces con Amor 🌱</h1>
+    <p>Creciendo sueños, cultivando amor</p>
+  </header>
+
+  <!-- Navegación -->
+  <nav>
+    <a href="#quienes">Quiénes somos</a>
+    <a href="#productos">Productos</a>
+    <a href="#eventos">Eventos</a>
+    <a href="#calidad">Calidad</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <!-- Sección: Quiénes somos -->
+  <section id="quienes">
+    <h2>Quiénes somos</h2>
+    <p>
+      En <strong>Raíces con Amor</strong> nos dedicamos a crear macetas y arreglos personalizados 
+      que transmiten vida, naturaleza y cuidado. Nuestra misión es promover el amor por la naturaleza 
+      a través de diseños únicos para el hogar, oficinas y eventos especiales.
+    </p>
+    <div class="imagenes">
+      <figure>
+        <img src="img/integrantes.png" alt="Nuestro equipo">
+        <figcaption>Nuestro equipo</figcaption>
+      </figure>
+      <figure>
+        <img src="img/recuerdo3.jfif" alt="Taller de trabajo">
+        <figcaption>Taller de trabajo</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Sección: Productos con Carrusel -->
+  <section id="productos">
+    <h2>Productos</h2>
+    <p>
+      Ofrecemos una gran variedad de macetas personalizadas con suculentas y plantas, 
+      ideales para regalos, decoración o detalles únicos.
+    </p>
+
+    <div class="carrusel">
+      <div class="carrusel-contenido" id="carrusel">
+        <div class="carrusel-item"><img src="img/elefante.jfif" alt="Maceta Elefante"><p>Maceta Elefante</p></div>
+        <div class="carrusel-item"><img src="img/angel.jfif" alt="Maceta Ángel"><p>Maceta Ángel</p></div>
+        <div class="carrusel-item"><img src="img/buo.jfif" alt="Maceta Búho"><p>Maceta Búho</p></div>
+        <div class="carrusel-item"><img src="img/luna.jfif" alt="Maceta Luna"><p>Maceta Luna</p></div>
+        <div class="carrusel-item"><img src="img/exagonal.jfif" alt="Maceta Hexagonal"><p>Maceta Hexagonal</p></div>
+        <div class="carrusel-item"><img src="img/caracola.jfif" alt="Maceta Caracola"><p>Maceta Caracola</p></div>
+        <div class="carrusel-item"><img src="img/octagonal.jfif" alt="Maceta Octagonal"><p>Maceta Octagonal</p></div>
+        <div class="carrusel-item"><img src="img/esfera.jfif" alt="Maceta Esferas"><p>Maceta Esferas</p></div>
+        <div class="carrusel-item"><img src="img/escamas.jfif" alt="Maceta Escamas"><p>Maceta Escamas</p></div>
+        <div class="carrusel-item"><img src="img/corazon.jfif" alt="Maceta Corazón"><p>Maceta Corazón</p></div>
+      </div>
+
+      <!-- Botones -->
+      <button class="carrusel-btn izquierda" onclick="moverCarrusel(-1)">❮</button>
+      <button class="carrusel-btn derecha" onclick="moverCarrusel(1)">❯</button>
+    </div>
+  </section>
+
+  <!-- Sección: Eventos -->
+  <section id="eventos">
+    <h2>Eventos especiales</h2>
+    <p>
+      También diseñamos macetas decoradas y recuerdos verdes para 
+      <strong>bodas, cumpleaños, eventos empresariales y reuniones sociales</strong>. 
+      Cada creación es única y pensada para sorprender a tus invitados.
+    </p>
+    <div class="imagenes">
+      <figure>
+        <img src="img/recuerdo.jfif" alt="Evento cumpleaños">
+        <figcaption>Recuerdos para cumpleaños</figcaption>
+      </figure>
+      <figure>
+        <img src="img/recuerdo2.jfif" alt="Evento graduacion">
+        <figcaption>Eventos de graduacion</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Sección: Calidad -->
+  <section id="calidad">
+    <h2>Compromiso con la calidad</h2>
+    <p>
+      Todos nuestros productos cumplen con estándares de <strong>calidad y sostenibilidad</strong>. 
+      Utilizamos materiales responsables y fomentamos prácticas amigables con el medio ambiente.
+    </p>
+    <div class="imagenes">
+      <figure>
+        <img src="img/cert.jpg" alt="Certificación de calidad">
+        <figcaption>Certificación de calidad</figcaption>
+      </figure>
+      <figure>
+        <img src="img/sustenta.jpeg" alt="Proceso sustentable">
+        <figcaption>Proceso sustentable</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Sección: Contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>📍 Ubicación: San Martin Texmelucan</p>
+    <p>📞 Teléfono: 2214339974</p>
+    <p>✉️ Correo: Raices_con_amor@gmail.com</p>
+    <p>📱 Síguenos en redes sociales: </p>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Raíces con Amor. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- JS para el carrusel -->
+  <script>
+    let indice = 0;
+    function moverCarrusel(direccion) {
+      const carrusel = document.getElementById("carrusel");
+      const items = document.querySelectorAll(".carrusel-item");
+      indice += direccion;
+
+      if (indice < 0) indice = items.length - 1;
+      if (indice >= items.length) indice = 0;
+
+      carrusel.style.transform = `translateX(${-indice * 100}%)`;
+    }
+  </script>
+
+</body>
+</html>
