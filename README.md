@@ -53,7 +53,7 @@
       margin-bottom: 1rem;
     }
 
-    /* Galería normal (Quiénes somos, Eventos, Calidad) */
+    /* Galería normal */
     .imagenes {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -81,34 +81,29 @@
       color: #555;
     }
 
-    /*  Carrusel Productos */
+    /* Carrusel */
     .carrusel {
       position: relative;
       overflow: hidden;
       width: 100%;
       border-radius: 12px;
     }
-
     .carrusel-contenido {
       display: flex;
       transition: transform 0.5s ease-in-out;
     }
-
     .carrusel-item {
       min-width: 100%;
       box-sizing: border-box;
       text-align: center;
       padding: 10px;
     }
-
     .carrusel-item img {
       width: 100%;
       max-width: 350px;
       border-radius: 12px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     }
-
-    /* Botones del carrusel */
     .carrusel-btn {
       position: absolute;
       top: 50%;
@@ -121,12 +116,8 @@
       border-radius: 50%;
       font-size: 18px;
     }
-    .carrusel-btn.izquierda {
-      left: 10px;
-    }
-    .carrusel-btn.derecha {
-      right: 10px;
-    }
+    .carrusel-btn.izquierda { left: 10px; }
+    .carrusel-btn.derecha { right: 10px; }
 
     /* Pie de página */
     footer {
@@ -218,7 +209,7 @@
       </figure>
       <figure>
         <img src="img/recuerdo2.jfif" alt="Evento graduacion">
-        <figcaption>Eventos de graduacion</figcaption>
+        <figcaption>Eventos de graduación</figcaption>
       </figure>
     </div>
   </section>
@@ -248,7 +239,12 @@
     <p>📍 Ubicación: San Martin Texmelucan</p>
     <p>📞 Teléfono: 2214339974</p>
     <p>✉️ Correo: Raices_con_amor@gmail.com</p>
-    <p>📱 Síguenos en redes sociales: </p>
+    <h3>Síguenos en redes sociales:</h3>
+    <ul>
+      <li>🌐 Facebook: Raíces con Amor</li>
+      <li>📸 Instagram: @RaicesConAmor</li>
+      <li>🐦 Twitter: @RaicesAmor</li>
+    </ul>
   </section>
 
   <!-- Pie de página -->
